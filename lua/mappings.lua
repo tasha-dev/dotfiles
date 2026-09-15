@@ -14,6 +14,10 @@ local lazygit = Terminal:new({
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
+vim.keymap.set({ "n", "t" }, "<C-\\>", "<cmd>ToggleTerm<CR>", {
+  desc = "Toggle terminal",
+})
+
 vim.keymap.set("n", "<leader>tt", vim.diagnostic.setloclist, {
   desc = "Show diagnostics",
 })
